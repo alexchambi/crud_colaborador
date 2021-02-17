@@ -52,8 +52,8 @@
 
         mysqli_query($conn, $query);
 
-        $_SESSION['message'] = 'Editado';
-        $_SESSION['message_type'] = 'info';
+        $_SESSION['alerta'] = 'Editado';
+        $_SESSION['tipo_alerta'] = 'info';
 
         header("Location: index.php");
     }

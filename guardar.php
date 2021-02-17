@@ -31,8 +31,8 @@
 
         #echo("Correcto");
 
-        $_SESSION['message'] = 'Registro correcto';
-        $_SESSION['message_type'] = 'success';
+        $_SESSION['alerta'] = 'Registro correcto';
+        $_SESSION['tipo_alerta'] = 'success';
 
         header("Location: index.php");
         

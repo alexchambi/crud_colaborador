@@ -12,8 +12,8 @@
             die("Error");
         }
 
-        $_SESSION['message'] = 'Eliminado';
-        $_SESSION['message_type'] = 'danger';
+        $_SESSION['alerta'] = 'Eliminado';
+        $_SESSION['tipo_alerta'] = 'danger';
         header("Location: index.php");
     }
 ?>

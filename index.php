@@ -68,21 +68,29 @@
 
     <div class="row">
         <div class="col-md-12">
-            <div class="row justify-content-end">
-                <button type="button" class="btn btn-success btn-registro justify-content-end" data-toggle="modal" data-target="#ventanamodal">
-                Registrar Nuevo:
-                </button>
-            </div>
-        
-            <?php
-                if(isset($_SESSION['message'])){ ?>
-                    <div class="alert alert-<?= $_SESSION['message_type'];?> alert-dismissible fade show" role="alert">
-                        <?= $_SESSION['message']?>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+            <div class="row">
+                <div class="col-md-6">
+                    <?php
+                    if(isset($_SESSION['alerta'])){ ?>
+                        <div id="alerta" class="alert alert-<?= $_SESSION['tipo_alerta'];?> alert-dismissible fade show" role="alert">
+                            <?= $_SESSION['alerta']?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php session_unset();} ?>
+                </div>
+                <div class="col-md-6 justify-content-end">
+                    <div class="row justify-content-end">
+                        <button type="button" class="btn btn-success btn-registro justify-content-end" data-toggle="modal" data-target="#ventanamodal">
+                        Registrar Nuevo <i class="fas fa-user-plus"></i>
                         </button>
                     </div>
-            <?php session_unset();} ?>
+                </div>
+                
+            </div>
+        
+            
         </div>
 
         <div class="col-md-12">
@@ -118,8 +126,8 @@
                                 <td><?php echo $row['telefono'] ?></td>
                                 <td><?php echo $row['direccion'] ?></td>
                                 <td>
-                                    <a href="editar.php?id=<?php echo $row['cod'] ?>" class="btn btn-sm btn-warning">Editar</a>
-                                    <a href="eliminar.php?id=<?php echo $row['cod'] ?>" class="btn btn-sm btn-danger">Eliminar</a> 
+                                    <a href="editar.php?id=<?php echo $row['cod'] ?>" class="btn btn-sm btn-warning"><i class="fas fa-user-edit"></i></a>
+                                    <a href="eliminar.php?id=<?php echo $row['cod'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a> 
                                 </td>
                             </tr>
                      <?php } ?>
