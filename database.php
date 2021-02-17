@@ -10,7 +10,10 @@
     );
 
     if (isset($conn)){
-        echo 'Conectado';
+        #echo 'Conectado';
+    }
+    else{
+        #echo "Desconectado";
     }
     
 ?>

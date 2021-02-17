@@ -65,6 +65,7 @@
 
 <div class="container">
 <div class="col-md-4 mx-auto">
+            <h5 class="text-alignc-center">Modificar Datos</h5>
 
             <form action="editar.php?id=<?php echo $_GET['id'];?>" method="POST">
                 <div class="md-3">
@@ -117,4 +118,4 @@
 
 
 
-<?php include("header.php");?>
+<?php include("footer.php");?>

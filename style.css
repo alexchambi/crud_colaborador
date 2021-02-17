@@ -1,0 +1,29 @@
+body{
+    background-color: whites;
+}
+
+.titulo{
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+}
+.btn-registro{
+    text-align: center;
+    margin: 0px 15px 10px 10px;
+}
+
+.table{
+    border: 0px;
+    width: 100%;
+    justify-content: center!important;
+    margin: 0px;
+    padding: 0px;
+}
+
+.table .thead-dark th {
+    text-align: center;
+}
+.table .tr {
+    text-align:center; 
+}
